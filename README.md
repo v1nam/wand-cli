@@ -1,6 +1,8 @@
 # wandbox-cli
 A cli tool which uses the wandbox api to compile over 32 languages instantly
 
+![](wandbox-cli.gif)
+
 # Running
 Its made in python, so you can run it with `python execute.py`
 
