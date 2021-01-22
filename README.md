@@ -8,8 +8,12 @@ A cli tool which uses the wandbox api to compile over 26 languages instantly
 # Running
 You can install it with python package manager `pip`
 ```sh
-   pip install wand-cli
+pip install wand-cli
 ```
+and run with
+```sh
+wandbox [OPTIONS]
+```  
 
 # Languages
 |     ..     |     ..     |
