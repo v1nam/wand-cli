@@ -1,4 +1,4 @@
-{
+compilers_ = {
     "python": "cpython-head",
     "c++": "gcc-head",
     "cpp": "gcc-head",

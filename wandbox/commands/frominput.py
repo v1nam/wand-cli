@@ -13,14 +13,13 @@ from rich.syntax import Syntax
 
 from wandbox.utilities.lang_lexers import init_lexers, lexers_dict, spinners
 from wandbox.utilities.utils import Utils
+from wandbox.utilities.compilers import compilers_
 
 
 class FromInput:
     def __init__(self):
         init_lexers()
-
-        with open("utilities/compilers.json") as compilers:
-            self.compilers = json.load(compilers)
+        self.compilers = compilers_
 
         self.console = Console()
         self.output_json = dict()

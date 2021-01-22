@@ -1,4 +1,4 @@
-{
+lang_extensions_ = {
     "py": "cpython-head",
     "cpp": "gcc-head",
     "c": "gcc-head",

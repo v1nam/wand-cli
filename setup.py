@@ -8,7 +8,7 @@ with open('requirements.txt') as f:
 
 setuptools.setup(
     name="wand-cli",
-    version="0.0.3",
+    version="1.4",
     author="vinam",
     author_email="vinamraj01@gmail.com",
     description="A cli tool to compile over 26 languages instantly using the wandbox api.",
@@ -22,7 +22,7 @@ setuptools.setup(
     ],
     python_requires='>=3.8',
     entry_points = {
-        'console_scripts': ['wandbox=wandbox.wandbox_cli:main'],
+        'console_scripts': ['wandbox=wandbox.cli_:main'],
     },
     keywords ='wandbox cli compile run', 
     install_requires = requirements, 

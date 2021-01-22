@@ -6,6 +6,7 @@ from rich.console import Console
 
 from wandbox.utilities.lang_lexers import spinners
 from wandbox.utilities.utils import Utils
+from wandbox.utilities.lang_extensions import lang_extensions_
 
 
 class FromFile:
@@ -13,8 +14,8 @@ class FromFile:
         self.console = Console()
         self.output_json = dict()
         self.spinners = spinners
-        with open("utilities/lang_extensions.json") as extensions:
-            self.extensions = json.load(extensions)
+
+        self.extensions = lang_extensions_
 
     def runfile(self, file):
         """Send code form file to the api and return the response."""
