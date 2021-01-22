@@ -3,7 +3,7 @@ A cli tool which uses the wandbox api to compile over 26 languages instantly
 
 ![](wandbox_preview_cli.gif)
 
-**Note**: The time for the output totally depends upon how fast your internet can make a post request, it can be as slow as mine or instantanious
+**Note**: The time for the output totally depends upon how fast your internet can make a post request, it can be as slow as mine or instantaneous
 
 # Running
 There's no executable available for now, so you can clone the repo and run it with python directly  
