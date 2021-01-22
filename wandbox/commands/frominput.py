@@ -11,8 +11,8 @@ from pygments.styles import get_style_by_name
 from rich.console import Console
 from rich.syntax import Syntax
 
-from utilities.lang_lexers import init_lexers, lexers_dict, spinners
-from utilities.utils import Utils
+from wandbox.utilities.lang_lexers import init_lexers, lexers_dict, spinners
+from wandbox.utilities.utils import Utils
 
 
 class FromInput:
@@ -42,7 +42,7 @@ class FromInput:
         The compiled output from the api is returned.
         """
         language = self.get_lang()
-        self.console.print("Enter your code, (press esc + enter to run)", style="green")
+        self.console.print("Enter your code, (press esc + enter to run)\n", style="green")
         style = sfpc(get_style_by_name("solarized-dark"))
 
         code = prompt(

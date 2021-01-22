@@ -4,8 +4,8 @@ import requests
 
 from rich.console import Console
 
-from utilities.lang_lexers import spinners
-from utilities.utils import Utils
+from wandbox.utilities.lang_lexers import spinners
+from wandbox.utilities.utils import Utils
 
 
 class FromFile:
