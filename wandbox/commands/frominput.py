@@ -43,7 +43,7 @@ class FromInput:
         """
         language = self.get_lang()
         self.console.print("Enter your code, (press esc + enter to run)", style="green")
-        style = sfpc(get_style_by_name("monokai"))
+        style = sfpc(get_style_by_name("solarized-dark"))
 
         code = prompt(
             "",
