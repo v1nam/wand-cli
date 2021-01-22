@@ -6,33 +6,25 @@ A cli tool which uses the wandbox api to compile over 32 languages instantly
 **Note**: The time for the output totally depends upon how fast your internet can make a post request, it can be as slow as mine or instantanious
 
 # Running
-Its made in python, so you can run it with `python execute.py`
+There's no executable available for now, so you can clone the repo and run it with python directly  
+```
+   git clone https://github.com/v1nam/wandbox-cli.git
+   cd wandbox-cli
+   python execute.py
+```
 
 # Languages
-- python
-- c++
-- c
-- javascript
-- coffeescript
-- java
-- haskell
-- bash
-- cmake
-- crystal
-- elixir
-- d
-- ruby
-- rust
-- sqlite
-- lisp
-- go
-- f#
-- scala
-- swift
-- typescript
-- vim
-- lua
-- nim
-- php
-- perl
-- pony
+|     ..     |     ..     |
+| :--------: | :--------: |
+| python     | f#         |
+| c++        | scala      |
+| c          | swift      |
+| javascript | typescript |
+| java       | vim        |
+| haskell    | lua        |
+| bash       | nim        |
+| cmake      | php        |
+| elixir     | perl       |
+| d          | pony       |
+| sqlite     | go         |
+| lisp       | ruby       |
