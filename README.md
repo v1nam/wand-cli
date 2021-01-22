@@ -1,5 +1,5 @@
 # wandbox-cli
-A cli tool which uses the wandbox api to compile over 32 languages instantly
+A cli tool which uses the wandbox api to compile over 26 languages instantly
 
 ![](wandbox_preview_cli.gif)
 
