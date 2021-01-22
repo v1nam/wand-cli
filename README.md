@@ -13,7 +13,6 @@ Its made in python, so you can run it with `python execute.py`
 - c++
 - c
 - javascript
-- js
 - coffeescript
 - java
 - haskell
