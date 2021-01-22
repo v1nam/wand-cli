@@ -10,7 +10,7 @@ There's no executable available for now, so you can clone the repo and run it wi
 ```
    git clone https://github.com/v1nam/wandbox-cli.git
    cd wandbox-cli
-   python execute.py
+   python wandbox.py
 ```
 
 # Languages
