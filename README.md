@@ -6,12 +6,14 @@ A cli tool which uses the wandbox api to compile over 26 languages instantly
 **Note**: The time for the output totally depends upon how fast your internet can make a post request, it can be as slow as mine or instantaneous
 
 # Running
-There's no executable available for now, so you can clone the repo and run it with python directly  
+You can install it with python package manager `pip`
+```sh
+pip install wand-cli
 ```
-   git clone https://github.com/v1nam/wandbox-cli.git
-   cd wandbox-cli
-   python wandbox.py
-```
+and run with
+```sh
+wandbox [OPTIONS]
+```  
 
 # Languages
 |     ..     |     ..     |
