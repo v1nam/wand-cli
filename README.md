@@ -1,12 +1,12 @@
-# wandbox-cli
-A cli tool which uses the wandbox api to compile over 26 languages instantly
+# Wandbox Cli
+A cli tool which uses the wandbox api to compile over 26 languages instantly, [Wandbox](http://melpon.org/wandbox/) is a social compilation service.
 
 ![](wandbox_preview_cli.gif)
 
 **Note**: The time for the output totally depends upon how fast your internet can make a post request, it can be as slow as mine or instantaneous
 
-# Running
-You can install it with python package manager `pip`
+# Installation
+You can install it with the python package manager `pip`
 ```sh
 pip install wand-cli
 ```
