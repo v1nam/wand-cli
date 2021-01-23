@@ -50,13 +50,17 @@ def main():
     try:
         if data.get("status") == "0":
             output = data["program_output"].strip()
-            console.print("\nYour code ran successfully with return code 0", style="green")
+            console.print(
+                "\nYour code ran successfully with return code 0", style="green"
+            )
 
             console.print(Utils.print_msg_box(output, width=width))
 
         elif data.get("signal") == "Killed":
             output = data["program_output"][:20].strip()
-            console.print("\nYour code ran successfully with status Killed", style="yellow")
+            console.print(
+                "\nYour code ran successfully with status Killed", style="yellow"
+            )
             console.print(Utils.print_msg_box(output, width=width))
             console.print("Truncated, output is too long", style="yellow")
 
@@ -70,9 +74,9 @@ def main():
     except KeyError:
         console.print(Utils.print_msg_box("No output", width=width))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     try:
         sys.exit(main())
     except Exception as e:
         print(f"Error:\n{e}")
-

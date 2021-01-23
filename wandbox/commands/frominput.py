@@ -41,7 +41,9 @@ class FromInput:
         The compiled output from the api is returned.
         """
         language = self.get_lang()
-        self.console.print("Enter your code, (press esc + enter to run)\n", style="green")
+        self.console.print(
+            "Enter your code, (press esc + enter to run)\n", style="green"
+        )
         style = sfpc(get_style_by_name("solarized-dark"))
 
         code = prompt(

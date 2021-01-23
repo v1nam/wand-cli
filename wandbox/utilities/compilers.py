@@ -30,5 +30,5 @@ compilers_ = {
     "nim": "nim-head",
     "php": "php-head",
     "perl": "perl-head",
-    "pony": "pony-head"
+    "pony": "pony-head",
 }

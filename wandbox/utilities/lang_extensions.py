@@ -25,5 +25,5 @@ lang_extensions_ = {
     "nim": "nim-head",
     "php": "php-head",
     "pl": "perl-head",
-    "pony": "pony-head"
+    "pony": "pony-head",
 }
