@@ -4,7 +4,7 @@ import requests
 
 from rich.console import Console
 
-from wandbox.utilities.lang_lexers import spinners
+from wandbox.utilities.constants import spinners
 from wandbox.utilities.utils import Utils
 from wandbox.utilities.lang_extensions import lang_extensions_
 
