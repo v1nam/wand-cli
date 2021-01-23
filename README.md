@@ -10,12 +10,23 @@ You can install it with the python package manager `pip`
 ```sh
 pip install wand-cli
 ```
-and run with
+After installing with pip, you will have the command available for you, so you can directly run by
 ```sh
 wandbox [OPTIONS]
 ```  
 
+## Options
+If you run the command without any option provided, you will be asked for the language name and then you can write your code in the terminal directly, and run it by pressing `esc + enter`  
+### list
+The list command, `wandbox --list` or `wandbox -l` is used to show the list of languages available.  
+### file
+The file command, `wandbox --file [FILE PATH]` or `wandbox -f [FILE PATH]` is used to compile a file.  
+### help
+The help command, `wandbox --help` or `wandbox -h` shows a brief description on the command.
+
+
 # Languages
+Here's a list of the languages which are available.
 |     ..     |     ..     |
 | :--------: | :--------: |
 | python     | f#         |
