@@ -8,42 +8,27 @@ from rich.console import Console
 from wandbox.utilities.utils import Utils
 from wandbox.utilities.maketable import MakeTable
 from wandbox.commands import commands_dict
+from wandbox.utilities.constants import themes, languages_table
 
 
 def main():
     console = Console()
 
-    prog = argparse.ArgumentParser(
-        prog="wandbox",
-        description="Compile code snippets through the wandbox api for over 26 languages",
-    )
-
-    prog.add_argument(
-        "-l",
-        "--list",
-        action="store_true",
-        help="List all the available languages",
-    )
-
-    prog.add_argument(
-        "-f",
-        "--file",
-        type=str,
-        help="Compile a file directly, full path to the file must be provided",
-        required=False,
-    )
-
-    args = prog.parse_args()
+    args = commands_dict["base"]()
 
     if args.list:
-        console.print(MakeTable.mktbl())
+        console.print(MakeTable.mktbl(languages_table))
         Utils.close()
 
-    if args.file:
+    if args.themelist:
+        console.print(MakeTable.mktbl(themes))
+        Utils.close()
+
+    elif args.file:
         data = commands_dict["fromfile"](args.file)
 
     else:
-        data = commands_dict["frominput"]()
+        data = commands_dict["frominput"](args.theme)
 
     width = os.get_terminal_size().columns - 5
 
@@ -57,7 +42,7 @@ def main():
             console.print(Utils.print_msg_box(output, width=width))
 
         elif data.get("signal") == "Killed":
-            output = data["program_output"][:20].strip()
+            output = data["program_output"][:100].strip()
             console.print(
                 "\nYour code ran successfully with status Killed", style="yellow"
             )
