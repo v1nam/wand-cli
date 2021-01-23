@@ -3,6 +3,7 @@ compilers_ = {
     "c++": "gcc-head",
     "cpp": "gcc-head",
     "c": "gcc-head",
+    "c#": "mono-head",
     "javascript": "nodejs-head",
     "js": "nodejs-head",
     "coffeescript": "coffeescript-head",
