@@ -1,5 +1,6 @@
 import pygments
 from pygments.styles import get_all_styles
+from wandbox.colorschemes import schemes
 
 
 def init_lexers():
@@ -30,6 +31,7 @@ def init_lexers():
     pygments.lexers.find_lexer_class_by_name("crystal")
     pygments.lexers.find_lexer_class_by_name("perl")
     pygments.lexers.find_lexer_class_by_name("pony")
+    pygments.lexers.find_lexer_class_by_name("c#")
 
 
 init_lexers()
@@ -37,6 +39,7 @@ init_lexers()
 lexers_dict = {
     "python": pygments.lexers.python.PythonLexer,
     "c++": pygments.lexers.c_cpp.CppLexer,
+    "c#": pygments.lexers.dotnet.CSharpLexer,
     "cpp": pygments.lexers.c_cpp.CppLexer,
     "c": pygments.lexers.c_cpp.CLexer,
     "javascript": pygments.lexers.javascript.JavascriptLexer,
@@ -79,8 +82,8 @@ spinners = [
     "bouncingBall",
 ]
 
-themes = tuple(get_all_styles())
-themes = [tuple(themes[style : style + 2]) for style in range(0, len(themes), 2)]
+themes = list(get_all_styles()) + schemes
+themes = [list(themes[style : style + 2]) for style in range(0, len(themes), 2)]
 
 languages_table = [
     ("python", "f#"),
@@ -95,4 +98,5 @@ languages_table = [
     ("d", "pony"),
     ("sqlite", "go"),
     ("lisp", "ruby"),
+    ("c#",),
 ]
