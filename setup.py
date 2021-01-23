@@ -8,7 +8,7 @@ with open("requirements.txt") as f:
 
 setuptools.setup(
     name="wand-cli",
-    version="1.5",
+    version="1.6",
     author="vinam",
     author_email="vinamraj01@gmail.com",
     description="A cli tool to compile over 26 languages instantly using the wandbox api.",
