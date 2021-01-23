@@ -8,12 +8,14 @@ from prompt_toolkit.lexers import PygmentsLexer
 from prompt_toolkit.shortcuts import prompt
 from prompt_toolkit.styles.pygments import style_from_pygments_cls as sfpc
 from pygments.styles import get_style_by_name, get_all_styles
+from pygments.util import ClassNotFound
 from rich.console import Console
 from rich.syntax import Syntax
 
 from wandbox.utilities.constants import init_lexers, lexers_dict, spinners
 from wandbox.utilities.utils import Utils
 from wandbox.utilities.compilers import compilers_
+from wandbox.colorschemes import schemes, scheme_dict
 
 
 class FromInput:
@@ -24,7 +26,7 @@ class FromInput:
         self.console = Console()
         self.output_json = dict()
         self.spinners = spinners
-        self.themes = tuple(get_all_styles())
+        self.themes = list(get_all_styles()) + schemes
 
     def get_lang(self):
         """Prompt the user for the programming language, close program if language not supported."""
@@ -46,7 +48,10 @@ class FromInput:
             "Enter your code, (press esc + enter to run)\n", style="green"
         )
         if theme in self.themes:
-            style = sfpc(get_style_by_name(theme))
+            try:
+                style = sfpc(get_style_by_name(theme))
+            except ClassNotFound:
+                style = scheme_dict[theme]()
         else:
             style = sfpc(get_style_by_name("solarized-dark"))
 
