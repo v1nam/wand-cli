@@ -30,8 +30,8 @@ The help command, `wandbox --help` or `wandbox -h` shows a brief description on 
 
 # Languages
 Here's a list of the languages which are available.  
-|     ..     |     ..     |
-| :--------: | :--------: |
+
+```
 | python     | f#         |
 | c++        | scala      |
 | c          | swift      |
@@ -44,3 +44,5 @@ Here's a list of the languages which are available.
 | d          | pony       |
 | sqlite     | go         |
 | lisp       | ruby       |
+
+```
