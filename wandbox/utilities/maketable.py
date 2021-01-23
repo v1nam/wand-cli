@@ -10,7 +10,10 @@ class MakeTable:
         l_table.add_column(width=12, justify="center")
 
         for lang in cont:
-            l_table.add_row(lang[0], lang[1])
+            try:
+                l_table.add_row(lang[0], lang[1])
+            except IndexError:
+                l_table.add_row(lang[0], "")
         return l_table
 
 
