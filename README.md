@@ -29,7 +29,7 @@ The themelist command (`wandbox --themelist` or `wandbox -tl`) is used to list a
 The help command, `wandbox --help` or `wandbox -h` shows a brief description on the command.  
 
 # Languages
-Here's a list of the languages which are available.
+Here's a list of the languages which are available.  
 |     ..     |     ..     |
 | :--------: | :--------: |
 | python     | f#         |
