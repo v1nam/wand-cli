@@ -26,4 +26,5 @@ lang_extensions_ = {
     "php": "php-head",
     "pl": "perl-head",
     "pony": "pony-head",
+    "cs": "mono-head"
 }
