@@ -32,17 +32,21 @@ The help command, `wandbox --help` or `wandbox -h` shows a brief description on 
 Here's a list of the languages which are available.  
 
 ```
-| python     | f#         |
-| c++        | scala      |
-| c          | swift      |
-| javascript | typescript |
-| java       | vim        |
-| haskell    | lua        |
-| bash       | nim        |
-| cmake      | php        |
-| elixir     | perl       |
-| d          | pony       |
-| sqlite     | go         |
-| lisp       | ruby       |
+┏━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┓
+┃    python    ┃      f#      ┃
+│     c++      │    scala     │
+│      c       │    swift     │
+│  javascript  │  typescript  │
+│     java     │     vim      │
+│   haskell    │     lua      │
+│     bash     │     nim      │
+│   crystal    │     php      │
+│    elixir    │     perl     │
+│      d       │     pony     │
+│    sqlite    │      go      │
+│     lisp     │     ruby     │
+│      c#      │ coffeescript │
+│     rust     │              │
+└──────────────┴──────────────┘
 
 ```

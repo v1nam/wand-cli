@@ -12,6 +12,16 @@ class Utils:
     def print_msg_box(self, msg, indent=1, width=None, title=None):
         """Print message-box with optional title."""
         lines = msg.split("\n")
+        true_lines = []
+
+        for line in lines:
+            if len(line) > width:
+                for trimmed in range((len(line)//width)+1):
+                    true_lines.append(line[width*trimmed:width+(trimmed*width)])
+            else:
+                true_lines.append(line)
+
+        lines = [i for i in true_lines if i]
         space = " " * indent
         if not width:
             width = max(map(len, lines))

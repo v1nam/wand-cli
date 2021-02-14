@@ -93,10 +93,12 @@ languages_table = [
     ("java", "vim"),
     ("haskell", "lua"),
     ("bash", "nim"),
-    ("cmake", "php"),
+    ("crystal", "php"),
     ("elixir", "perl"),
     ("d", "pony"),
     ("sqlite", "go"),
     ("lisp", "ruby"),
-    ("c#",),
+    ("c#", "coffeescript"),
+    ("rust", )
 ]
+

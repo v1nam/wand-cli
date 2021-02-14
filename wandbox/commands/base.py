@@ -5,7 +5,8 @@ class Base:
     def run(self):
         prog = argparse.ArgumentParser(
             prog="wandbox",
-            description="Compile code snippets through the wandbox api for over 26 languages",
+            usage="%(prog)s [options] Language",
+            description="Compile code snippets through the wandbox api for over 27 languages",
         )
 
         prog.add_argument(
@@ -27,7 +28,7 @@ class Base:
             "-t",
             "--theme",
             type=str,
-            help="Change the default theme (solarized-dark) of code, to see available themes use -tl or --themelist",
+            help="Change the default theme (monokai) of code, to see available themes use -tl or --themelist",
             required=False,
         )
 
@@ -38,9 +39,25 @@ class Base:
             help="List all the available themes/colorschemes",
         )
 
-        args = prog.parse_args()
+        prog.add_argument(
+            "Language",
+            type=str,
+            help="The language you want to compile.",
+            nargs="?",
+            default="python",
+        )
 
-        return args
+        prog.add_argument(
+            "-e",
+            "--editor",
+            type=str,
+            help="""Open an editor of choice to write code in a temporary buffer\n
+                    Please use a terminal editor for this, gui editors work differently \
+                    and can cause unexpected behaviour.
+                 """,
+            required=False,
+        )
+        return prog.parse_args()
 
 
 Base = Base()

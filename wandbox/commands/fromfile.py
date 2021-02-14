@@ -20,8 +20,7 @@ class FromFile:
     def runfile(self, file):
         """Send code form file to the api and return the response."""
         try:
-            code = open(file)
-            code = code.read()
+            code = open(file).read()
 
             if not any(file.endswith("." + ext) for ext in self.extensions):
                 self.console.print(

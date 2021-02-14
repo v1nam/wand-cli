@@ -24,26 +24,24 @@ class FromInput:
         self.compilers = compilers_
 
         self.console = Console()
-        self.output_json = dict()
+        self.output_json = {}
         self.spinners = spinners
         self.themes = list(get_all_styles()) + schemes
 
-    def get_lang(self):
-        """Prompt the user for the programming language, close program if language not supported."""
-        language = self.console.input("[green]Enter language:[/green] ").lower()
-
+    def get_lang(self, language):
+        """Get the programming language from argument, close program if language not supported."""
         if language not in self.compilers:
             self.console.print("Language is not supported!", style="bold red")
             Utils.close()
         return language
 
-    def askinp(self, theme="solarized-dark"):
+    def askinp(self, theme, language):
         """
         Make a multiline prompt for code input and send the code to the api.
 
         The compiled output from the api is returned.
         """
-        language = self.get_lang()
+        language = self.get_lang(language)
         self.console.print(
             "Enter your code, (press esc + enter to run)\n", style="green"
         )
@@ -53,7 +51,7 @@ class FromInput:
             except ClassNotFound:
                 style = scheme_dict[theme]()
         else:
-            style = sfpc(get_style_by_name("solarized-dark"))
+            style = sfpc(get_style_by_name("monokai"))
 
         code = prompt(
             "",
