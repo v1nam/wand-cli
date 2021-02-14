@@ -12,7 +12,7 @@ pip install wand-cli
 ```
 After installing with pip, you will have the command available for you, so you can directly run by
 ```sh
-wandbox [OPTIONS]
+wandbox [OPTIONS] language
 ```  
 
 ## Commands
@@ -21,6 +21,8 @@ If you run the command without any option provided, you will be asked for the la
 The list command, `wandbox --list` or `wandbox -l` is used to show the list of languages available.  
 ### file
 The file command, `wandbox --file [FILE PATH]` or `wandbox -f [FILE PATH]` is used to compile a file.  
+### editor
+The editor command, `wandbox --editor [editor-name]` or `wandbox -e [editor-name]` is used to open a temporary buffer in an editor to edit files, the code is run after the editor is closed, **note**: its recommended to use a terminal editor for this, gui editors can cause unexpected behaviour.  
 ### theme
 The theme command, `wandbox --theme [theme name]` or `wandbox -t [theme name]` is used to change the colorscheme for the in-place text editor  
 ### themelist
