@@ -60,7 +60,7 @@ def main():
                 if "error" in k:
                     output = data[k].strip()
                     break
-            console.print("\nYour {args.Language} code errored out ;(", style="red")
+            console.print(f"\nYour {args.Language} code errored out ;(", style="red")
             console.print(Utils.print_msg_box(output, width=width))
     except KeyError:
         console.print(Utils.print_msg_box("No output", width=width))
