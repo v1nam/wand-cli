@@ -26,9 +26,16 @@ lib64/
 parts/
 sdist/
 var/
+pkg/
+src/
 *.egg-info/
 .installed.cfg
 *.egg
+wand
+PKGBUILD
+.SRCINFO
+*.tar.gz
+*.pkg.tar.zst
 wandbox/cli_.py
 
 # PyInstaller

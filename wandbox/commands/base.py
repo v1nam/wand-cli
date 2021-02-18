@@ -44,7 +44,7 @@ class Base:
             type=str,
             help="The language you want to compile.",
             nargs="?",
-            default="python",
+            default="none",
         )
 
         prog.add_argument(
