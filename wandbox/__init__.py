@@ -74,7 +74,7 @@ def main():
         if data.get("status") == "0":
             output = data["program_output"].strip()
             console.print(
-                f"\nYour {args.Language} code ran successfully UwU", style="green"
+                f"\nYour {args.Language} code ran successfully", style="green"
             )
 
             console.print(Utils.print_msg_box(output, width=width))
@@ -93,7 +93,7 @@ def main():
                 if "error" in k:
                     output = data[k].strip()
                     break
-            console.print(f"\nYour {args.Language} code errored out ;(", style="red")
+            console.print(f"\nYour {args.Language} code errored out :(", style="red")
             console.print(Utils.print_msg_box(output, width=width))
     except KeyError:
         console.print(Utils.print_msg_box("No output", width=width))
